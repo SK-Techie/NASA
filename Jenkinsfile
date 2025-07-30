@@ -1,12 +1,11 @@
 pipeline {
-
     agent any
 
     stages {
-        stage('clone code') {
+        stage('Clone Code') {
             steps {
-            echo "clone the code"
-            git credentialsId: 'github-token', url: 'https://github.com/SK-Techie/NASA.git'
+                echo "Cloning public GitHub repository"
+                git url: 'https://github.com/SK-Techie/NASA.git'
             }
         }
     }
