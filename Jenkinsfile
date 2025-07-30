@@ -5,6 +5,7 @@ pipeline {
         stage('Clone Code') {
             steps {
                 echo "Cloning public GitHub repository"
+                sh 'cd /var/www/html'
                 git branch: 'main', url: 'https://github.com/SK-Techie/NASA.git'
             }
         }
